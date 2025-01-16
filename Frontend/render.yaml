@@ -7,4 +7,4 @@ services:
     staticPublishPath: "build"
     envVars:
       - key: VITE_API_URL
-        value: 
+        value:"https://post-page-rzna.onrender.com"
