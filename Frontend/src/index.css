@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grad-blue {
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+.grad-orange {
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+}
+
+.grand-black {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+/* Media queries */
+@media (max-width: 600px) {
+  .sml {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .ml {
+    display: none;
+  }
+}
+
+.message-box {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Global styles for dark mode */
+ 

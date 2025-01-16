@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: my-backend
+    env: node
+    branch: main
+    buildCommand: cd Backend && npm install
+    startCommand: cd Backend && npm start
+    envVars:
+      - key: JWT_SECRET
+        sync: false
+      - key: PORT
+        sync: false
+      - key: JWT_EXPIRES_IN
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_FROM_EMAIL
+        sync: false
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+      - key: RECIPIENT_EMAIL
+        sync: false
+     headers:
+      - path: /*
+        name: Access-Control-Allow-Origin
+        value: 
+        
+ 

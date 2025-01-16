@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: my-frontend
+    env: static
+    branch: main
+    buildCommand: "npm install && npm run build"
+    staticPublishPath: "build"
+    envVars:
+      - key: VITE_API_URL
+        value: 

@@ -1,0 +1,21 @@
+# Node.js Modules (will be handled in frontend and backend)
+node_modules/
+
+# General Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor or IDE-specific files
+.vscode/
+.idea/
+*.swp
+
+# Misc
+!.gitkeep
