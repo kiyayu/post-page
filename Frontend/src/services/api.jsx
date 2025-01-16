@@ -6,7 +6,7 @@ const api = axios.create({
     "Content-Type": "application/json", // Ensure content type is set correctly
   },
 });
- console.log("this is envarionment vairable",import.meta.env.VITE_API_URL)
+ 
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("authToken");

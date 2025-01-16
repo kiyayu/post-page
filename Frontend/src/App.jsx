@@ -45,7 +45,6 @@ export default function App() {
                 <Route path="/posttest" element={<PostsList />} />
                 <Route path='notification' element={<Notification />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/post" element={<Post />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
