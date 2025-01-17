@@ -4,10 +4,10 @@ services:
     env: static
     branch: main
     buildCommand: "npm install && npm run build"
-    staticPublishPath: "build"  # Ensure this matches your build folder
+    staticPublishPath: "dist"  # Change this to 'dist'
     routes:
       - type: rewrite
-        source: /.*  # Redirect all paths to index.html
+        source: /.*  # Redirect all paths to index.html for React Router to handle
         destination: /index.html
     headers:
       - path: /*  # Optional Cache-Control header if needed

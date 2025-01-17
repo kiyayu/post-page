@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
-    historyApiFallback: true, // Ensures all routes fallback to index.html
+    historyApiFallback: true, // Ensure all paths fallback to index.html
     host: true,
     strictPort: true,
     cors: true,
@@ -17,7 +17,7 @@ export default defineConfig({
     historyApiFallback: true,
   },
   build: {
-    outDir: "dist",
+    outDir: "dist", // Ensure this matches your build folder
     sourcemap: true,
     rollupOptions: {
       output: {
