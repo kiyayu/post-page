@@ -1,7 +1,5 @@
 import cors from "cors";
-import express from "express";
-import path from "path";
-import { fileURLToPath } from "url";
+import express from "express"; 
 import { connectDB } from "./config/db.js";
 import userRoutes from "./routes/userRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
@@ -15,11 +13,7 @@ app.use(express.json());
 
 // CORS Configuration
 app.use(
-  cors({
-    origin: "https://post-page-f.onrender.com", // Replace with your frontend URL
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
+  cors()
 );
 
 // Connect to Database
