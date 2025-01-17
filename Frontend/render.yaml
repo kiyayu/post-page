@@ -1,16 +1,16 @@
 services:
-  - type: static
+  - type: web  
     name: my-frontend
     env: static
     branch: main
     buildCommand: "npm install && npm run build"
-    staticPublishPath: "dist"  # Change this to 'dist'
+    staticPublishPath: "dist"
     routes:
       - type: rewrite
-        source: /.*  # Redirect all paths to index.html for React Router to handle
+        source: "/*"   
         destination: /index.html
     headers:
-      - path: /*  # Optional Cache-Control header if needed
+      - path: /*
         name: Cache-Control
         value: no-cache
     envVars:
