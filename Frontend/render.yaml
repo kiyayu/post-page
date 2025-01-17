@@ -1,16 +1,16 @@
 services:
-  - type: web
+  - type: static
     name: my-frontend
     env: static
     branch: main
     buildCommand: "npm install && npm run build"
-    staticPublishPath: "build"
+    staticPublishPath: "build"  # Ensure this matches your build folder
     routes:
       - type: rewrite
-        source: /*
+        source: /.*  # Redirect all paths to index.html
         destination: /index.html
     headers:
-      - path: /*
+      - path: /*  # Optional Cache-Control header if needed
         name: Cache-Control
         value: no-cache
     envVars:
