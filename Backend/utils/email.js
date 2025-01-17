@@ -50,7 +50,7 @@ export const sendVerificationEmail = async (email, token, locale = "en") => {
   if (!isValidEmail(email)) throw new Error("Invalid email address");
   if (!token) throw new Error("Token is required");
 
-  const verificationUrl = `${environment.server.baseUrl}/verify-email/${token}`;
+ const verificationUrl = `${environment.server.baseUrl.trim()}/verify-email/${token}`;
   const template = emailTemplates[locale]?.verification;
 
   const emailData = {

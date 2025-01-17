@@ -6,10 +6,10 @@ dotenv.config();
  * Environment-specific configurations for the application
  */
 export const environment = {
-  server: {
+    server: {
     port: process.env.PORT || 5000,
     mode: process.env.NODE_ENV || "development",
-    baseUrl:"https://post-page-f.onrender.com "  
+    baseUrl: "https://post-page-f.onrender.com".trim()  // Remove any potential whitespace
   },
 
   database: {
