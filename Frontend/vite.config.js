@@ -5,19 +5,13 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
-    historyApiFallback: true,
+    historyApiFallback: true, // Allow client-side routing in development
     host: true,
     strictPort: true,
     cors: true,
   },
-  preview: {
-    port: 3000,
-    strictPort: true,
-    host: true,
-    historyApiFallback: true,
-  },
   build: {
-    outDir: "dist",
+    outDir: "dist", // Output directory for build files
     sourcemap: true,
     rollupOptions: {
       output: {
@@ -25,10 +19,10 @@ export default defineConfig({
       },
     },
   },
-  base: "/",
+  base: "/", // Ensures your app works correctly when hosted at the root of a domain
   resolve: {
     alias: {
-      "@": "/src",
+      "@": "/src", // Easy import alias
     },
   },
 });
