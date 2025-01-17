@@ -21,7 +21,7 @@ const createEmailTemplate = (
   title,
   buttonText,
   buttonUrl,
-  additionalText = ""
+  additionalText = "" 
 ) => `
   <!DOCTYPE html>
   <html>
