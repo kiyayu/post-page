@@ -1,5 +1,5 @@
 services:
-  - type: web  
+  - type: web
     name: my-frontend
     env: static
     branch: main
@@ -7,7 +7,7 @@ services:
     staticPublishPath: "dist"
     routes:
       - type: rewrite
-        source: "/*"   
+        source: "/*"
         destination: /index.html
     headers:
       - path: /*

@@ -3,32 +3,17 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
+  build: {
+    outDir: "dist", // Build output directory
+  },
   server: {
     port: 3000,
-    historyApiFallback: true, // Ensure all paths fallback to index.html
-    host: true,
-    strictPort: true,
-    cors: true,
+    cors: true, // Allow CORS if needed
+    historyApiFallback: true, // Handle SPA routing
   },
   preview: {
     port: 3000,
-    strictPort: true,
-    host: true,
-    historyApiFallback: true,
+    historyApiFallback: true, // Ensure fallback during preview
   },
-  build: {
-    outDir: "dist", // Ensure this matches your build folder
-    sourcemap: true,
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-      },
-    },
-  },
-  base: "/",
-  resolve: {
-    alias: {
-      "@": "/src",
-    },
-  },
+  base: "/", // Ensure relative paths
 });

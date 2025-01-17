@@ -3,8 +3,8 @@ services:
     name: my-backend
     env: node
     branch: main
-    buildCommand: cd Backend && npm install
-    startCommand: cd Backend && npm start
+    buildCommand: "cd Backend && npm install"
+    startCommand: "cd Backend && npm start"
     envVars:
       - key: JWT_SECRET
         sync: false
@@ -28,9 +28,7 @@ services:
         sync: false
       - key: RECIPIENT_EMAIL
         sync: false
-     headers:
+    headers:
       - path: /*
         name: Access-Control-Allow-Origin
         value: https://post-page-f.onrender.com
-        
- 
