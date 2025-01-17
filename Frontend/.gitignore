@@ -12,7 +12,6 @@ dist
 dist-ssr
 *.local
 
-# .env
 .env
 Frontend/.env.development
 Frontend/.env.production

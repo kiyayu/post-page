@@ -9,7 +9,7 @@ export const environment = {
   server: {
     port: process.env.PORT || 5000,
     mode: process.env.NODE_ENV || "development",
-    baseUrl:"https://post-page-f.onrender.com " // "http://localhost:5173","https://post-page-rzna.onrender.com"
+    baseUrl:"https://post-page-f.onrender.com "  
   },
 
   database: {
