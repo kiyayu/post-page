@@ -6,7 +6,7 @@ import { connectDB } from "./config/db.js";
 import userRoutes from "./routes/userRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
 import notificationRoutes from "./routes/notificationRoutes.js";
-import {} from "../Frontend/dist/"
+ 
 
 const app = express();
 
