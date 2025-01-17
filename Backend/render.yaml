@@ -31,6 +31,6 @@ services:
      headers:
       - path: /*
         name: Access-Control-Allow-Origin
-        value: https://devconnect-f.onrender.com
+        value: https://post-page-f.onrender.com
         
  
